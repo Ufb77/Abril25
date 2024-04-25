@@ -1,0 +1,25 @@
+<app-add-componente (producto)="recibirDatos($event)"></app-add-componente>
+<button (click)="guardarBd()">Guardar en la bd</button>
+<p><button (click)="mostrarBd()">Mostrar la bd</button></p>
+
+<p>
+    
+</p>
+@for (producto of productos; track $index) {
+
+    <p>
+
+        Id: {{producto.idProducto}}|
+        Nombre: {{producto.nombreProducto}}|
+        Precio: {{producto.precioUnitario}} €|
+        Unidades: {{producto.unidadesStock}} uds|  
+        Categoria: {{producto.categoria}}
+        <br>
+        <button (click)="eliminar(producto.idProducto)">Eliminar producto con id: {{producto.idProducto}}</button>
+
+    </p>
+
+
+}
+
+
